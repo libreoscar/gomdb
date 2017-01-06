@@ -208,7 +208,7 @@ func (env *Env) Path() (string, error) {
 }
 
 func (env *Env) SetMapSize(size uint64) error {
-	ret := C.mdb_env_set_mapsize(env._env, C.size_t(size))
+	ret := C.mdb_env_set_mapsize(env._env, C.mdb_size_t(size))
 	return errno(ret)
 }
 
